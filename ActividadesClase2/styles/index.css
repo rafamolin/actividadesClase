@@ -1,0 +1,71 @@
+/* importaciones de fuente */
+@import url('https://fonts.cdnfonts.com/css/ysabeau-sc');
+@import url('https://fonts.cdnfonts.com/css/quito');
+
+/* establecer las variables de nuestro css 
+paleta de colores
+tipografia
+medidas (opcional) variables
+*/
+
+/* root: archivo raiz para todo lo que este en el html (etiqueta doctype html)
+ */
+:root {
+
+/* paleta de colores */
+--colorFondo:#D8C37F;
+--colorEnfasis1:#A4AE20;
+--colorEnfasis2:#C57023;
+--colorEnfasis3:#7B361A;
+--colorText:#d9d09e85;
+--colorText2:#19160A;
+
+/* fuentes */
+--textTitle:'Ysabeau SC', sans-serif;
+--textContent:'Quito', sans-serif
+
+}
+
+/* condicione o estilos iniciales de mi pagina  */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+background-color: var(--colorFondo);
+width: 100vw;
+height: auto;
+/* overflow -> sirve para definir que pasa con mi contenido que sobresale de mi contenido */
+overflow-x: hidden;
+}
+
+/* -----------header---------- */
+
+header {
+width: 100%;
+height: 100px;
+border: solid red;
+background-color: var(--colorEnfasis3);
+
+
+}
+
+.menuNavegacion {
+width: 100%;
+height: 100px;
+position: fixed;
+top: 0%;
+right: 0%;
+background-color: var(--colorEnfasis3);
+}
+
+
+
+
+/* -----------main---------- */
+/* -----------footer---------- */
+
+
