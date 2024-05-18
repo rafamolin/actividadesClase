@@ -1,0 +1,196 @@
+/* importaciones de fuente */
+@import url('https://fonts.cdnfonts.com/css/ysabeau-sc');
+@import url('https://fonts.cdnfonts.com/css/quito');
+
+
+:root {
+
+/* paleta de colores */
+--colorFondo:#0537a3c5;
+--color1:#581845;
+--color2:#C57023;
+--color3:#7B361A;
+--colorText:#f8f7f4;
+
+/* fuentes */
+--textTitle:'Ysabeau SC', sans-serif;
+--textContent:'Quito', sans-serif
+
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+width: 100vw;
+height: 100vh;
+overflow-x: hidden;
+}
+
+/* -----------header---------- */
+
+header {
+width: 100%;
+height: 100px;
+}
+
+.menuNavegacion {
+width: 100%;
+height: 100px;
+background-color: var(--colorFondo);
+position: fixed;
+top: 0;
+left: 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-left: 20px;
+padding-right: 20px;
+z-index: 1000;
+}
+
+.logo {
+height: 100%;
+}
+
+.logo a {
+height: 100%;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 10px;
+text-decoration: none;
+font-family: va(--textContent);
+color: var(--colorText);
+font-weight: bold;
+font-size: 25px;
+}
+
+.p-logo {
+width: 150px;
+/* alineacion del texto */
+text-align: center;
+}
+.img-logo {
+height: 80%;
+}
+        
+.listaMenu {
+display: flex;
+gap: 90px;
+list-style: none;
+}
+
+.listaMenu a {
+text-decoration: none;
+color: var(--colorText);
+font-family: var(--textContent);
+font-size: 20px;
+}
+        
+.listaMenu a:hover {
+color: var(--colorEnfasis1);
+}
+
+/* cierre de mi header -------*/
+
+/* inicio de mi main--------- */
+
+main {
+background-color: #21576d;
+width: 100%;
+padding: 100px;
+
+}
+
+.contendorPrincipal {
+font-family: var(--textContent);
+}
+
+.contenedorPrincipal img-baner {
+width: 100%;
+height: 100%;
+margin: 50px;
+}
+
+.contendorPrincipal h1 {
+font-size: 40px;
+color: var(--colorEnfasis3);
+}
+
+.contenedorImagenes {
+margin-top: 50px;
+border-radius: 50px;
+overflow: hidden;display: grid;
+grid-template-rows: 1fr 1fr 1fr;
+grid-template-columns: repeat(4, 1fr);
+}
+
+
+/* ajuste de mis imagenes display-gris */
+
+.contenedorImagenes img {
+width: 100%;
+height: 100%;
+}
+
+.imagenes {
+display: grid;
+position: relative;
+}
+
+.img1 {
+grid-row: 1/4;
+grid-column: 1/2;
+}
+
+.img2 {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    }
+
+.img3 {
+grid-row: 1/2;
+grid-column: 3/4;
+}
+
+.img4 {
+grid-row: 2/3;
+grid-column: 2/3;
+}
+
+.img5 {
+grid-row: 2/3;
+grid-column: 3/4;
+}
+
+.img6 {
+grid-row: 3/4;
+grid-column: 2/3;
+}
+
+    .img7 {
+grid-row: 3/4;
+grid-column: 3/4;
+}
+
+.img8 {
+grid-row: 1/4;
+grid-column: 4/6;
+}
+
+
+footer {
+height: 100px;
+background-color: var(--colorFondo);
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 25px;
+font-family: var(--textContent);
+color: var(--colorText);
+}
