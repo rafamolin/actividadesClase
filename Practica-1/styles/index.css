@@ -96,6 +96,19 @@ font-size: 20px;
 color: var(--colorEnfasis1);
 }
 
+.baner {
+background-color: red;
+width: 100%;
+height: 500px;
+}
+
+.img-baner {
+width: 100%;
+height: 100%;
+}
+
+
+
 /* cierre de mi header -------*/
 
 /* inicio de mi main--------- */
@@ -109,12 +122,6 @@ padding: 100px;
 
 .contendorPrincipal {
 font-family: var(--textContent);
-}
-
-.contenedorPrincipal img-baner {
-width: 100%;
-height: 100%;
-margin: 50px;
 }
 
 .contendorPrincipal h1 {
