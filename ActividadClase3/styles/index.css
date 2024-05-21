@@ -1,0 +1,127 @@
+/* variables */
+:root{
+    --colorfondo: beige;
+    --colorclaro: lightsalmon;
+    --colorenfacis: rgba(19, 105, 105, 0.973);
+}
+
+
+*{
+    padding: 0;
+    margin:  0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: var(--colorfondo);
+    font-family: var();
+    font-size: 25px;
+    overflow-x: hidden;
+}
+
+/* header*/
+
+header{
+    border: 15px solid red;
+    width: 100vw;
+    height: auto;
+}
+.titulo {
+height: 150px;
+width: 100%;
+background-color: var(--colorenfacis);
+display: grid;
+place-content: center;
+/* margin auto -> centrar -> contenedores */
+color: var(--colorfondo);
+
+}
+
+/* mi carrusel de imagenes */
+/* en el contenedor define que se ve y que no */
+.contenedor-slider{
+    border: 5px solid var(--colorenfacis);
+    width: 1000px;
+    height: 500px;
+    margin: 100px auto;
+    overflow-x: scroll;
+}
+
+
+/* contenedor dierecto, le especifico que se debe mover */
+.slider{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* nombre que se conecta con el keyframe */
+    animation-name: deslizar;
+    /* tiempp de duracion */
+    animation-duration: 2s;
+    /* cantidad de repeticiones de la animacion */
+    animation-iteration-count: infinite;
+    /* forma en que queremos que se vea el movimiento */
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    }
+
+    /* vamos a poner a funcionar la animacion */
+    /* 0% 50% 100% */
+    /* from to */
+
+@keyframes deslizar {
+    from{
+        transform: translateX(0%);
+        transform: scale(0.5);
+    }
+    50%{
+        transform: translatex(-150px);
+        transform: scale(1);
+    }
+    to{
+        transform: translateX(-300%);
+        transform: scale(1.2);
+    }
+}
+
+/* @keyframes rotar {
+    from{
+        transform: rotate(0deg);
+    }
+    
+    to{
+        transform: rotate(-360deg);
+    }
+} */
+
+/* @keyframes escala {
+    from{
+        transform: scale(0.4);
+    }
+} */
+
+
+.contenedor-slider img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+/* main */
+/* footer */
+
+footer {
+    height: 150px;
+    width: 100%;
+    background-color: var(--colorenfacis);
+    /* alternativa para centrarun elemento */
+    display: grid;
+    /* centra x - y */
+    place-content: center;
+    color: white;
+}
