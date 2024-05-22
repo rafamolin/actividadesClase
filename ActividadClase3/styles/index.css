@@ -3,8 +3,10 @@
     --colorfondo: beige;
     --colorclaro: lightsalmon;
     --colorenfacis: rgba(19, 105, 105, 0.973);
+    --
 }
 
+/* condiciones iniciales */
 
 *{
     padding: 0;
@@ -23,7 +25,6 @@ body{
 /* header*/
 
 header{
-    border: 15px solid red;
     width: 100vw;
     height: auto;
 }
@@ -35,19 +36,32 @@ display: grid;
 place-content: center;
 /* margin auto -> centrar -> contenedores */
 color: var(--colorfondo);
-
+transition: all 500ms ease-in-out;
 }
+
+.titulo:active{
+    background-color: brown;
+    color: chartreuse;
+    transform: scale(1.2);
+}
+
+
+
 
 /* mi carrusel de imagenes */
 /* en el contenedor define que se ve y que no */
 .contenedor-slider{
     border: 5px solid var(--colorenfacis);
-    width: 1000px;
-    height: 500px;
+
+    /* para el responsive, no usar valores fijos como px. si n o valores relativos */
+
+    width: 70%;
+    height: 65vh;
+    /* width: 1000px;
+    height: 500px; */
     margin: 100px auto;
     overflow-x: scroll;
 }
-
 
 /* contenedor dierecto, le especifico que se debe mover */
 .slider{
@@ -57,7 +71,7 @@ color: var(--colorfondo);
     /* nombre que se conecta con el keyframe */
     animation-name: deslizar;
     /* tiempp de duracion */
-    animation-duration: 2s;
+    animation-duration: 5s;
     /* cantidad de repeticiones de la animacion */
     animation-iteration-count: infinite;
     /* forma en que queremos que se vea el movimiento */
@@ -72,15 +86,15 @@ color: var(--colorfondo);
 @keyframes deslizar {
     from{
         transform: translateX(0%);
-        transform: scale(0.5);
+        /* transform: scale(0.5); */
     }
     50%{
-        transform: translatex(-150px);
-        transform: scale(1);
+        transform: translatex(-150%);
+        
     }
     to{
         transform: translateX(-300%);
-        transform: scale(1.2);
+        /* transform: scale(1.2); */
     }
 }
 
@@ -112,7 +126,65 @@ color: var(--colorfondo);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* main */
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.contenido{
+    border: 5px solid var(--colorenfacis);
+    width: 75%;
+    height: auto;
+    margin-bottom: 100px;
+
+}
+
+.tituloSecundario{
+    text-align: center;
+    padding: 25px;
+}
+
+.imgParrafo{
+    display: flex;
+    gap: 45px;
+    align-items: center;
+    padding: 20px;
+}
+/* se puede llamar varios elementos de html para aplicar los mismos estilos separandolos por , */
+.imgParrafo img,
+.imgParrafo p {
+    width: 500%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* footer */
 
 footer {
@@ -125,3 +197,30 @@ footer {
     place-content: center;
     color: white;
 }
+
+
+/* diseño responsive */
+
+/* 1.trabajen en % (medidas no fijas) de una vez */
+
+/* 2.media queries */
+
+/* MEDIA QUERIES */
+
+/* me permiten cambiar la apriercia demis elementos en funcion de mi tamaño de mi pantalla  
+
+dimensiones min Pc -> 1200px en adelante
+
+dimensiones para tablet -> 500px 1024px
+
+dimensiones de celular -> 320 400px
+*/
+
+
+/* estilos para mi celular  */
+@media screen and (max-width:490px) {
+    body{
+        background-color: blue;
+    }
+}
+
